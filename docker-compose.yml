@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  web:
+    image: ericoh/cypress-test-web-page
+    ports:
+      - 80:80
+    restart: always
