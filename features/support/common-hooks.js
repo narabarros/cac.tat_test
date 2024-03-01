@@ -12,7 +12,9 @@ BeforeAll(async function () {
     let browser = await page.webkit.launch({ headless: false });
 
     global.browser = browser;
-    const context = await browser.newContext()
+    const context = await browser.newContext({
+        viewport: { width: 1366, height: 1200 }
+    });
     context.setDefaultTimeout(5000)
 
     global.context = context;
