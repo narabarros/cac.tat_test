@@ -17,3 +17,10 @@ Feature: Fill in information on the first validation
     And I upload the file
     And I take a screenshot and save it as "screenshot.png"
     Then I click on the submit button
+
+
+  Scenario: Fill some information correctly and another incorrect
+    Given I am on the home page
+    When I fill in the "First Name" field with "John"
+    And I fill in the "Last Name" field with "Doe"
+    Then I click on the submit button
