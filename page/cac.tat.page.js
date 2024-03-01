@@ -9,8 +9,8 @@ class CacTatPage {
     }
 
     async navigate() {
-        await this.delay();
         await this.page.goto('http://localhost/');
+        await new Promise(resolve => setTimeout(resolve, 2500));
     }
 
     async fillFirstName(name) {
@@ -60,7 +60,7 @@ class CacTatPage {
 
     async submitForm() {
         await this.delay();
-        await this.page.click('#white-background > form > button');
+        await this.page.click('.modern-button');
     }
 }
 
